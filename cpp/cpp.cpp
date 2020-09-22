@@ -1,10 +1,14 @@
-// cpp.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+﻿#include <iostream>
 
-#include <iostream>
+using namespace std;
 
+//Main alapvetően nincs param, de ha akarunk parancssorról fogadni akkor felkészíthetjük a main-t rá
+/*
+* cin >>   ->  input adatfolyam
+* cout <<  -> output adatfolyam
+*/
 int main()
 {
-	std::cout << "Hello World!\n";
+	cout << "Hello World!" << endl;
 	return 0;
 }
