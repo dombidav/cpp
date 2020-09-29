@@ -2,31 +2,60 @@
 //
 
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
 //Main-ben használt szignatúrák
 int EgeszBeker();
+void Szorzotabla(int tablaMeret);
+int Szelesseg(int tablaMeret);
 
 int main()
 {
-	cout << "Kell egy egész" << endl;
-	int egesz;
-	cin >> egesz;
-
-	cout << "Kell egy tört" << endl;
-	float tort;
-	cin >> tort;
-
-	cout << egesz << "; " << tort;
-
-	//int TablaMeret = EgeszBeker();
+	int TablaMeret = EgeszBeker();
+	Szorzotabla(TablaMeret);
 }
 
 int EgeszBeker()
 {
-	cout << "Kérek egy egész számot";
 	int szam;
-	cin >> szam;
+
+	do {
+		cout << "Kerek egy egesz szamot";
+	} while (!(cin >> szam));
+
 	return szam;
+}
+
+void Szorzotabla(int tablaMeret)
+{
+	int szelesseg = Szelesseg(tablaMeret);
+
+	cout << setw(szelesseg) << " ";
+	for (int i = 1; i <= tablaMeret; i++)
+	{
+		cout << setw(szelesseg) << i;
+	}
+	cout << endl;
+
+	for (int i = 1; i <= tablaMeret; i++) {
+		cout << setw(szelesseg) << i;
+		for (int j = 1; j <= tablaMeret; j++)
+		{
+			cout << setw(szelesseg) << i * j;
+		}
+		cout << endl;
+	}
+}
+
+int Szelesseg(int tablaMeret)
+{
+	int max = tablaMeret * tablaMeret;
+	int szelesseg = 0;
+	while (max) {
+		max = max / 10;
+		szelesseg++;
+	}
+	return szelesseg + 1;
 }
