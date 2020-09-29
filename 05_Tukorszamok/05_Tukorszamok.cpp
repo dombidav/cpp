@@ -3,7 +3,7 @@
 
 /*
 * Be: (a, b) ; a < b ; a >= 10
-* Ki: [a..b]-n a tükörszámok (11, 101, 343)
+* Ki: [a..b] a tükörszámok (11, 101, 343)
 */
 
 #include <iostream>
