@@ -16,7 +16,7 @@ bool isMirror(int number);
 
 int main()
 {
-	int a = Read();
+	int a = Read(10);
 	int b = Read(a);
 
 	MirrorNumbers(a, b);
